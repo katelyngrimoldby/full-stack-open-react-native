@@ -11,14 +11,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'left',
     backgroundColor: theme.colors.black,
-    flexGrow: 1,
   },
 });
 
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <AppBarTab text='Repositories' />
+      <AppBarTab text='Repositories' route='/' />
+      <AppBarTab text='Sign In' route='/signin' />
     </View>
   );
 };

@@ -10,10 +10,12 @@
     "lint": "eslint ./src/**/*.{js,jsx} App.js --no-error-on-unmatched-pattern"
   },
   "dependencies": {
+    "@ungap/url-search-params": "^0.2.2",
     "expo": "~46.0.17",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
-    "react-native": "0.69.6"
+    "react-native": "0.69.6",
+    "react-router-native": "^6.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
