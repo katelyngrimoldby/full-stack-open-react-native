@@ -3,14 +3,16 @@ import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+  },
 });
 
 const Main = () => {
   return (
     <>
-      <AppBar routes={['Repositories', 'Settings']} />
       <View style={styles.container}>
+        <AppBar />
         <RepositoryList />
       </View>
     </>

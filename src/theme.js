@@ -7,8 +7,8 @@ const theme = {
     white: '#fafafa'
   },
   fontSizes: {
-    body: 14,
-    subheading: 16,
+    body: 16,
+    subheading: 20,
   },
   fonts: {
     main: 'System',
