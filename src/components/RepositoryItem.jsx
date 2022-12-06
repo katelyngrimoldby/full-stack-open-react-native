@@ -5,11 +5,11 @@ import theme from '../theme.js';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.white,
-    padding: 15,
+    padding: 16,
   },
   topRow: {
     flexDirection: 'row',
-    marginBottom: 5,
+    marginBottom: 8,
     flexShrink: 1,
     flexGrow: 1,
   },
@@ -17,12 +17,13 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 10,
-    marginRight: 15,
+    marginRight: 16,
   },
   language: {
     alignSelf: 'flex-start',
     backgroundColor: theme.colors.blue,
-    padding: 5,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
     borderRadius: 5,
     overflow: 'hidden',
   },
@@ -47,15 +48,15 @@ const RepositoryItem = ({ repo }) => {
     <View style={styles.container}>
       <View style={styles.topRow}>
         <Image style={styles.image} source={{ uri: repo.ownerAvatarUrl }} />
-        <View style={{ flexShrink: 1, marginBottom: 10 }}>
+        <View style={{ flexShrink: 1 }}>
           <Text
-            style={{ marginBottom: 5 }}
+            style={{ marginBottom: 4 }}
             fontSize='subheader'
             fontWeight='bold'
           >
             {repo.fullName}
           </Text>
-          <Text style={{ marginBottom: 7 }} color='textSecondary'>
+          <Text style={{ marginBottom: 8 }} color='textSecondary'>
             {repo.description}
           </Text>
           <Text color='light' style={styles.language}>

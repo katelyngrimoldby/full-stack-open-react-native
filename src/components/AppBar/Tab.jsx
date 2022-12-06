@@ -4,7 +4,7 @@ import Text from '../CustomText';
 
 const styles = StyleSheet.create({
   item: {
-    marginLeft: 15,
+    marginLeft: 16,
   },
 });
 
