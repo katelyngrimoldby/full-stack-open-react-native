@@ -17,7 +17,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const SignInForm = ({ onSubmit }) => {
+const SignInForm = ({ onSubmit, errors }) => {
+  const buttonStyle = [
+    styles.button,
+    (errors.username || errors.password) && { opacity: 0.5 },
+  ];
+
   return (
     <View style={styles.container}>
       <FormikTextInput name='username' placeholder='Username' />
@@ -26,7 +31,11 @@ const SignInForm = ({ onSubmit }) => {
         placeholder='Password'
         secureTextEntry={true}
       />
-      <Pressable onPress={onSubmit} style={styles.button}>
+      <Pressable
+        onPress={onSubmit}
+        style={buttonStyle}
+        disabled={errors.username || errors.password}
+      >
         <Text color='light' fontWeight='bold'>
           Sign In
         </Text>
