@@ -1,7 +1,20 @@
-import Text from './CustomText';
+import { Formik } from 'formik';
+import SignInForm from './SignInForm';
 
 const SignIn = () => {
-  return <Text>The sign in view</Text>;
+  const initialValues = {
+    username: '',
+    password: '',
+  };
+
+  return (
+    <Formik
+      initialValues={initialValues}
+      onSubmit={(values) => console.log(values)}
+    >
+      {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
+    </Formik>
+  );
 };
 
 export default SignIn;
