@@ -1,6 +1,6 @@
 import { View, StyleSheet, Image } from 'react-native';
-import Text from './CustomText.jsx';
-import theme from '../theme.js';
+import Text from '../CustomText.jsx';
+import theme from '../../theme.js';
 
 const styles = StyleSheet.create({
   container: {
@@ -45,7 +45,7 @@ const roundNumber = (number) => {
 
 const RepositoryItem = ({ repo }) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID='repositoryItem'>
       <View style={styles.topRow}>
         <Image style={styles.image} source={{ uri: repo.ownerAvatarUrl }} />
         <View style={{ flexShrink: 1 }}>
