@@ -10,7 +10,6 @@ const useRepository = (id) => {
 
   useEffect(() => {
     if(data) {
-      console.log(data)
       setRepository(data.repository)
     }
   }, [data, loading, id])

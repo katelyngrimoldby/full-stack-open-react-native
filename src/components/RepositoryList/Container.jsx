@@ -25,9 +25,10 @@ const RepositoryListContainer = ({ repositories }) => {
       style={styles.container}
       data={repositoryNodes}
       ItemSeparatorComponent={ItemSeparator}
+      keyExtractor={({ id }) => id}
       renderItem={({ item }) => (
         <Link to={`/${item.id}`}>
-          <RepositoryItem key={item.id} repo={item} />
+          <RepositoryItem repo={item} />
         </Link>
       )}
     />
