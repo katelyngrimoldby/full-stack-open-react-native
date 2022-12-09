@@ -37,6 +37,7 @@ const AppBar = () => {
         <AppBarTab text='Repositories' route='/' />
         {data && data.me ? (
           <>
+            <AppBarTab text='Review' route='/review' />
             <Pressable
               style={{
                 marginLeft: 16,
@@ -47,10 +48,12 @@ const AppBar = () => {
                 Sign Out
               </Text>
             </Pressable>
-            <AppBarTab text='Review' route='/review' />
           </>
         ) : (
-          <AppBarTab text='Sign In' route='/signin' />
+          <>
+            <AppBarTab text='Sign In' route='/signin' />
+            <AppBarTab text='Sign Up' route='/signup' />
+          </>
         )}
       </ScrollView>
     </View>
