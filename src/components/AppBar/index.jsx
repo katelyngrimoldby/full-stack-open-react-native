@@ -36,16 +36,19 @@ const AppBar = () => {
       >
         <AppBarTab text='Repositories' route='/' />
         {data && data.me ? (
-          <Pressable
-            style={{
-              marginLeft: 16,
-            }}
-            onPress={handlePress}
-          >
-            <Text color='light' fontSize='subheading'>
-              Sign Out
-            </Text>
-          </Pressable>
+          <>
+            <Pressable
+              style={{
+                marginLeft: 16,
+              }}
+              onPress={handlePress}
+            >
+              <Text color='light' fontSize='subheading'>
+                Sign Out
+              </Text>
+            </Pressable>
+            <AppBarTab text='Review' route='/review' />
+          </>
         ) : (
           <AppBarTab text='Sign In' route='/signin' />
         )}
